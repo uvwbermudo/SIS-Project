@@ -10,6 +10,7 @@ import pandas as pd
 import os
 
 # credits https://www.reddit.com/r/learnpython/comments/69vm4t/pyqt5_and_high_resolution_monitors/ 
+# to fix gui not displaying properly on different resolutions
 QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling, True) 
 
 class EDITform(QMainWindow):
