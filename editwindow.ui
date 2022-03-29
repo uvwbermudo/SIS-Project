@@ -47,9 +47,9 @@
    <widget class="QComboBox" name="genderField">
     <property name="geometry">
      <rect>
-      <x>84</x>
+      <x>82</x>
       <y>136</y>
-      <width>62</width>
+      <width>71</width>
       <height>20</height>
      </rect>
     </property>
@@ -82,13 +82,13 @@
      <string>Done</string>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>23</x>
-      <y>23</y>
+      <x>21</x>
+      <y>31</y>
       <width>381</width>
-      <height>112</height>
+      <height>100</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
@@ -142,10 +142,44 @@
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QLineEdit" name="yearField">
-       <property name="placeholderText">
-        <string>e.g. &quot;4&quot;</string>
+      <widget class="QComboBox" name="yearField">
+       <property name="minimumSize">
+        <size>
+         <width>51</width>
+         <height>0</height>
+        </size>
        </property>
+       <property name="maximumSize">
+        <size>
+         <width>51</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <item>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>5</string>
+        </property>
+       </item>
       </widget>
      </item>
     </layout>
@@ -156,7 +190,6 @@
   <tabstop>idField</tabstop>
   <tabstop>nameField</tabstop>
   <tabstop>courseField</tabstop>
-  <tabstop>yearField</tabstop>
   <tabstop>genderField</tabstop>
   <tabstop>doneEdit</tabstop>
  </tabstops>

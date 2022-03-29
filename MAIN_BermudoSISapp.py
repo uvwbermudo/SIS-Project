@@ -53,14 +53,12 @@ class EDITform(QMainWindow):
             self.error_dialog.showMessage('Course field cannot be blank!')
             return
 
-        year = self.yearField.text()
-        if (self.checkYear(year) == False):
-            self.error_dialog.showMessage('Please input a valid year level!')
-            return
+        year = self.yearField.currentText()
         gender = self.genderField.currentText()
         bm.editstudent(idNumber,fullName.title(),course.upper(),year,gender,bm.mainfile,self.chosenRow)
         self.close()   
         mygui.refresh()
+
 
     def checkIDformat(self, idNumber):
         if len(idNumber)!= 9:
@@ -75,12 +73,6 @@ class EDITform(QMainWindow):
                 if idNumber[i] != '-':
                     return False
         return True
-    def checkYear(self,year):
-        try:
-            int(year)
-            str(year)
-        except:
-            return False
 
 
 class ADDform(QMainWindow):
@@ -112,10 +104,7 @@ class ADDform(QMainWindow):
             self.error_dialog.showMessage('Course field cannot be blank!')
             return
 
-        year = self.yearField.text()
-        if (self.checkYear(year) == False):
-            self.error_dialog.showMessage('Please input a valid year level!')
-            return
+        year = self.yearField.currentText()
         gender = self.genderField.currentText()
         bm.addStudent(idNumber,fullName.title(),course.upper(),year,gender,bm.mainfile)
         self.doneAdd.setEnabled(False)
@@ -138,15 +127,6 @@ class ADDform(QMainWindow):
             if( (i == 4) and (idNumber[i] != '-')):
                     return False
         return True
-
-    def checkYear(self,year):
-        try:
-            int(year)
-            str(year)
-        except:
-            return False
-
-
 
 
 
@@ -196,7 +176,6 @@ class SISgui(QMainWindow):
             self.setWindowTitle(f'Bermudo\'s Student Information System')
             self.pathLabel.setText(f'Current file:')
 
-
         else:   
             pass
 
@@ -231,7 +210,7 @@ class SISgui(QMainWindow):
         self.window3.idField.setText(self.all_data.loc[row].at['ID Number'])
         self.window3.nameField.setText(self.all_data.loc[row].at['Full Name'])
         self.window3.courseField.setText(self.all_data.loc[row].at['Course'])
-        self.window3.yearField.setText(str(self.all_data.loc[row].at['Year Level']))
+        self.window3.yearField.setCurrentText(str(self.all_data.loc[row].at['Year Level']))
         self.window3.genderField.setCurrentText(self.all_data.loc[row].at['Gender'])
 
         self.window3.show()

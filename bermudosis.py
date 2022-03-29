@@ -49,5 +49,5 @@ def makeDefaultFile():
                                 ['2019-2000','This File Is For Testing', 'BSIT', '3','Male'],
                                 ['2021-1971','Jean Angeles', 'BSCS', '1','Female']],    
                                 columns=['ID Number','Full Name','Course','Year Level','Gender']) 
-        my_default.to_csv(defaultFile, index = False)
+        my_default.to_csv(defaultFile, index = False) 
 
