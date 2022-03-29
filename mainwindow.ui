@@ -19,12 +19,6 @@
     <height>601</height>
    </size>
   </property>
-  <property name="maximumSize">
-   <size>
-    <width>55555</width>
-    <height>55555</height>
-   </size>
-  </property>
   <property name="font">
    <font>
     <family>Segoe UI</family>
